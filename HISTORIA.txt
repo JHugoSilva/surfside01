@@ -1,0 +1,30 @@
+composer create-project --prefer-dist laravel/laravel surfside
+php artisan make:controller HomeController
+php artisan make:controller UserController
+php artisan make:component Header
+php artisan make:controller ClientController
+php artisan make:controller FluentController
+php artisan stub:publish
+php artisan make:controller StudentController
+php artisan make:controller StudentnewController
+php artisan make:controller LoginController
+php artisan make:middleware CheckUser
+php artisan make:controller SessionController
+php artisan make:controller PostController
+
+php artisan make:migration create_posts_table --create=posts
+php artisan make:model Post
+php artisan migrate
+php artisan migrate:rollback
+php artisan migrate:refresh
+php artisan make:seeder PostTableSeeder
+
+composer dump-autoload
+php artisan db:seed
+php artisan migrate:fresh --seed
+php artisan db:seed
+php artisan make:controller PaginationController
+php artisan make:controller UploadController
+php artisan make:provider PaymentServiceProvider
+php artisan make:controller MailController
+php artisan make:mail TestMail
