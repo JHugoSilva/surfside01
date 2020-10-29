@@ -1,8 +1,10 @@
 @extends('layouts/layout')
-@section('title','Enviar Email')
+@section('title','Email')
     
 @section('content')
-    <h1>{{$details['title']}}</h1>
-    <p>{{$details['body']}}</p>
-    <p>Ok</p>
+    <h1>Contact Message:</h1>
+    <p>Name: {{$details['name']}}</p>
+    <p>Email: {{$details['email']}}</p>
+    <p>Phone: {{$details['phone']}}</p>
+    <p>Message: {{$details['msg']}}</p>
 @endsection

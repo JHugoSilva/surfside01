@@ -68,4 +68,8 @@ Route::get('/payment', function () {
     return Payment::process();
 });
 
-Route::get('/send_email', [MailController::class, 'sendEmail']);
+//Route::get('/send_email', [MailController::class, 'sendEmail']);
+
+Route::get('/contact-us', [MailController::class, 'contact']);
+
+Route::post('/send-message', [MailController::class, 'sendEmail'])->name('contact.send');
